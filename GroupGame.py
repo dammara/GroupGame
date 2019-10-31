@@ -27,6 +27,7 @@ def rules():
     6. If you roll a 6 or 8, you move forward 2 steps.
     7. If you roll a lucky 7, you get to roll again.""")
 
+
 def play():
     play1 = input(">>>").title()
     if play1 == "Yes" or "Y" or "y" or "yes":
@@ -51,4 +52,4 @@ print(f"""This game is called Candy Land.
 print("Let me explain the rules to you, {name}.")
 rules()
 candy_land()
-play()
+
