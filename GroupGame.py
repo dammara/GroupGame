@@ -4,8 +4,7 @@
 # Candy Land
 
 from random import *
-
-location = ["Lose", "Spot1", "", "", "", "", "", "", "", "", "", "", "", "13", "", "", "", "", "", "19", "Win"]
+position = [1]
 # Landing on 13 sends you back 2 steps, landing on a 19 sends you back to tile 1
 
 
@@ -15,7 +14,7 @@ def roll_dice():
 
 def rules():
     print("""1. You will roll a dice to move about the board.
-    2. You must get to spot 20 to win. If you land on 0, you lose!
+    2. You must get to spot 20 to win. If your position is equal to 0, you lose!
     3. If you roll a 1 or 3, you move back 1 step.
     4. If you roll a 5, you move back 2 steps.
     5. If you roll a 2 or 4, you move forward 1 step.
@@ -24,14 +23,25 @@ def rules():
 
 
 def candy_land():
+    while position[0] <= 0:
+        print("Game over!")
+        print("You Lost!")
+        print("Would you like to play again?")
+        again = input(">>>").title()
+        if again == "Yes" or again == "Y":
+            print("Coolio.")
+            position.clear()
+            position.append(1)
+            candy_land()
+        else:
+            print("How is your body feeling? I bet it's sore!")
+            print("Sore loser!")
+            exit()
+
     roll_dice()
     print(f"You rolled a {roll_dice()}")
-
     if roll_dice() == 1 or 3:
-
-
-
-
+        print("You have been moved back one space.")
 
 
 def play():
@@ -39,7 +49,7 @@ def play():
     if play1 == "Yes" or "Y":
         print("Alright, lettuce get this show on the road!")
     elif play1 == "No" or "N":
-        print("Lml, noob! Too bad for you! XD")
+        print("Lml, noob!XD")
         exit()
     else:
         print("Yes or No answers please.")
