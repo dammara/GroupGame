@@ -5,7 +5,7 @@
 
 from random import *
 
-location = ["Lose", "", "", "", "", "", "", "", "", "", "", "", "", "13", "", "", "", "", "", "19", "Win"]
+location = ["Lose", "Spot1", "", "", "", "", "", "", "", "", "", "", "", "13", "", "", "", "", "", "19", "Win"]
 # Landing on 13 sends you back 2 steps, landing on a 19 sends you back to tile 1
 
 
@@ -13,8 +13,24 @@ def roll_dice():
     return randint(1, 8)
 
 
+def rules():
+    print("""1. You will roll a dice to move about the board.
+    2. You must get to spot 20 to win. If you land on 0, you lose!
+    3. If you roll a 1 or 3, you move back 1 step.
+    4. If you roll a 5, you move back 2 steps.
+    5. If you roll a 2 or 4, you move forward 1 step.
+    6. If you roll a 6 or 8, you move forward 2 steps.
+    7. If you roll a lucky 7, you get to roll again.""")
+
+
 def candy_land():
+    roll_dice()
     print(f"You rolled a {roll_dice()}")
+
+    if roll_dice() == 1 or 3:
+
+
+
 
 
 
