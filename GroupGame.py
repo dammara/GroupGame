@@ -14,9 +14,7 @@ def roll_dice():
 
 
 def candy_land():
-
     print(f"You rolled a {roll_dice()}")
-
 
 
 
@@ -42,4 +40,3 @@ print(f"""This game is called Candy Land.
 Let me explain the rules to you, {name}.
 """)  # I'll let you explain the rules
 candy_land()
-
