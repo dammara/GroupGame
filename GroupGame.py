@@ -38,6 +38,9 @@ def candy_land():
             print("Sore loser!")
             exit()
 
+    while position[0] == 13:
+        print("You have been moved back 2 spaces")
+
     roll_dice()
     print(f"You rolled a {roll_dice()}")
     if roll_dice() == 1 or 3:
@@ -60,9 +63,9 @@ print("Hello user, what is your name?")
 name = input(">>>").title()
 print(f"Ahh, nice to meet you {name}.")
 print("My name is...")  # Make up a name M.
-print("Would you like gto play a game? *Yes or No*")
+print("Would you like to play a game? *Yes or No*")
 play()
 print(f"""This game is called Candy Land.
-Let me explain the rules to you, {name}.
-""")  # I'll let you explain the rules
+Let me explain the rules to you, {name}.""")
+rules()
 candy_land()
