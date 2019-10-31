@@ -4,7 +4,8 @@
 # Candy Land
 
 from random import *
-location = []
+
+location = ["", "", "", "", "", "", "", "", "", "", "", "", "", "13", "", "", "", "", "", "19", "Win"]
 
 
 def dice():
@@ -31,6 +32,7 @@ def play():
         print("Alright, lettuce get this show on the road!")
     elif play1 == "No" or "N" or "no" or "n":
         print("Lml, noob! Too bad for you! XD")
+        exit()
     else:
         print("Yes or No answers please.")
         play()
@@ -48,3 +50,4 @@ print(f"""This game is called Candy Land.
 print("Let me explain the rules to you, {name}.")
 rules()
 candy_land()
+play()
