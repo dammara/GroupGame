@@ -5,7 +5,7 @@
 
 from random import *
 
-location = ["Lose", "Spot1", "", "", "", "", "", "", "", "", "", "", "", "13", "", "", "", "", "", "19", "Win"]
+power_card = ["Lose", "Plus3", "Nothing", "Back2"]
 # Landing on 13 sends you back 2 steps, landing on a 19 sends you back to tile 1
 
 
@@ -23,11 +23,12 @@ def rules():
     7. If you roll a lucky 7, you get to roll again.""")
 
 
-def candy_land():
+def candy_land():  # This will be the game within the function
     roll_dice()
     print(f"You rolled a {roll_dice()}")
 
     if roll_dice() == 1 or 3:
+
 
 
 
