@@ -5,7 +5,8 @@
 
 from random import *
 
-location = ["", "", "", "", "", "", "", "", "", "", "", "", "", "13", "", "", "", "", "", "19", "Win"]
+location = ["Lose", "", "", "", "", "", "", "", "", "", "", "", "", "13", "", "", "", "", "", "19", "Win"]
+# Landing on 13 sends you back 2 steps, landing on a 19 sends you back to tile 1
 
 
 def dice():
